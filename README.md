@@ -2,7 +2,7 @@
 
 This is an example in TypeScript of using the design pattern called "prototype"
 
-## Wild Pokémon appear
+## Wild Pokémon appears
 
 This is probably not the real mechanism of the original game. I am reinventing a portion of the algorithm. 
 
