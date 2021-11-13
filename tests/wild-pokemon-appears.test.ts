@@ -26,7 +26,7 @@ class Pikachu extends Pokemon {
 
 class Rattata extends Pokemon {
     clone() {
-        return this;
+        return new Rattata({hp: 27});
     }
 
     equals(pokemon: Pokemon) {
@@ -63,12 +63,16 @@ describe('TU wild Pokémon appears', () => {
     test('It should clone with different stats', async () => {
         // Arrange
         const pikachu = new Pikachu();
+        const rattata = new Rattata();
 
         // Act
         const wildPikachu: Pikachu = pikachu.clone();
+        const wildRattata: Rattata = rattata.clone();
 
         // Assert
         expect(pikachu.hp).toEqual(25);
         expect(wildPikachu.hp).toEqual(26);
+        expect(rattata.hp).toEqual(25);
+        expect(wildRattata.hp).toEqual(27);
     });
 });
