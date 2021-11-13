@@ -27,7 +27,7 @@ describe('TU wild Pokémon appears', () => {
         expect(wildPikachu.equals(wildRattata)).toEqual(false);
     });
 
-    test('It should clone with different stats', async () => {
+    test('It should clone with different stats for each Pokémon', async () => {
         // Arrange
         const pikachu = new Pikachu();
         const rattata = new Rattata();

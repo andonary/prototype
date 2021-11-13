@@ -1,8 +1,10 @@
 import {Pokemon} from "./parent/pokemon";
 
 export class Pikachu extends Pokemon {
+    hpIV: number = 1;
+
     clone() {
-        return new Pikachu({hp: 26});
+        return new Pikachu(this.generateNewStats());
     }
 
     equals(pokemon: Pokemon) {
