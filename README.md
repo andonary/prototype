@@ -10,7 +10,7 @@ When a player encounter a wild Pokémon, the game has already generated a templa
 
 Since we are playing in a Gameboy, CPU is very weak. Optimization needs to be done. Creating a new Pokémon is very costing. As a consequence, we are using the same template Pokémon, and regenerating a wild Pokémon with this.
 
-Pokémon statisques :
+Pokémon stats :
 
 - HP
 - Attack
