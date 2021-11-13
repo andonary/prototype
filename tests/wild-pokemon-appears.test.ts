@@ -1,38 +1,5 @@
-interface IV {
-    hp: number
-}
-
-abstract class Pokemon {
-    hp: number = 25;
-
-    constructor(individualValues?: IV) {
-        if (individualValues) {
-            Object.assign(this, individualValues);
-        }
-    }
-
-    abstract clone(): Omit<Pokemon, "clone">
-}
-
-class Pikachu extends Pokemon {
-    clone() {
-        return new Pikachu({hp: 26});
-    }
-
-    equals(pokemon: Pokemon) {
-        return pokemon instanceof Pikachu;
-    }
-}
-
-class Rattata extends Pokemon {
-    clone() {
-        return new Rattata({hp: 27});
-    }
-
-    equals(pokemon: Pokemon) {
-        return pokemon instanceof Rattata;
-    }
-}
+import {Pikachu} from "../src/prototype/pikachu";
+import {Rattata} from "../src/prototype/rattata";
 
 describe('TU wild Pokémon appears', () => {
     test('It should clone a new wild Pikachu', async () => {
